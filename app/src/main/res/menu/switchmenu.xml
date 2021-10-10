@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_user"
+          android:title="유저 정보"/>
+
+    <item android:id="@+id/menu_competition"
+        android:title="대회 정보"/>
+
+    <item android:id="@+id/menu_pub"
+        android:title="홀덤펍 정보"/>
+</menu>

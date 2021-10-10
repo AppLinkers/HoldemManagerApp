@@ -13,6 +13,25 @@ public class Member {
     private String user_name;
     private String user_pass;
 
+    public String getUser_locate() {
+        return user_locate;
+    }
+
+    public void setUser_locate(String user_locate) {
+        this.user_locate = user_locate;
+    }
+
+    public String getUser_phoneNum() {
+        return user_phoneNum;
+    }
+
+    public void setUser_phoneNum(String user_phoneNum) {
+        this.user_phoneNum = user_phoneNum;
+    }
+
+    private String user_locate;
+    private String user_phoneNum;
+
     public long getId() {
         return id;
     }

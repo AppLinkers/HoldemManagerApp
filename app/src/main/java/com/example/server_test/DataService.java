@@ -1,5 +1,7 @@
 package com.example.server_test;
 
+import com.example.server_test.competition.Competition;
+
 import java.util.List;
 import java.util.Map;
 
@@ -20,10 +22,10 @@ public class DataService {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
-    SelectAPI select = retrofitClient.create(SelectAPI.class);
-    InsertAPI insert = retrofitClient.create(InsertAPI.class);
-    UpdateAPI update = retrofitClient.create(UpdateAPI.class);
-    DeleteAPI delete = retrofitClient.create(DeleteAPI.class);
+    public SelectAPI select = retrofitClient.create(SelectAPI.class);
+    public InsertAPI insert = retrofitClient.create(InsertAPI.class);
+    public UpdateAPI update = retrofitClient.create(UpdateAPI.class);
+    public DeleteAPI delete = retrofitClient.create(DeleteAPI.class);
 }
 
 interface InsertAPI{
@@ -45,6 +47,9 @@ interface SelectAPI{
 interface UpdateAPI{
     @POST("members/update")
     Call<Member> updateOne(@Query("user_id") String user_id, @Body Map<String, String> map);
+
+    @POST("competitions/update")
+    Call<Competition> updateOneCompetition(@Query("user_id") String user_id, @Body Map<String, String> map);
 }
 
 interface DeleteAPI{

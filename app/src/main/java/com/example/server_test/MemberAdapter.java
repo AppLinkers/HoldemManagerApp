@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +52,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
         holder.info_user_id.setText(String.valueOf(data.get(position).getUser_id()));
         holder.info_user_name.setText(String.valueOf(data.get(position).getUser_name()));
         holder.info_user_pass.setText(String.valueOf(data.get(position).getUser_pass()));
+        holder.info_user_loc.setText(String.valueOf(data.get(position).getUser_locate()));
+        holder.info_user_phoneNum.setText(String.valueOf(data.get(position).getUser_phoneNum()));
 
         // 정보 수정하기
         holder.info_update.setOnClickListener(new View.OnClickListener(){
@@ -60,6 +63,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
                 holder.update_user_id.setText(String.valueOf(data.get(position).getUser_id()));
                 holder.update_user_name.setText(String.valueOf(data.get(position).getUser_name()));
                 holder.update_user_pass.setText(String.valueOf(data.get(position).getUser_pass()));
+                holder.info_user_loc.setText(String.valueOf(data.get(position).getUser_locate()));
+                holder.info_user_phoneNum.setText(String.valueOf(data.get(position).getUser_phoneNum()));
 
                 holder.info_layout.setVisibility(View.GONE);
                 holder.update_layout.setVisibility(View.VISIBLE);
@@ -74,6 +79,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
                 map.put("user_id", holder.update_user_id.getText().toString());
                 map.put("user_name", holder.update_user_name.getText().toString());
                 map.put("user_pass", holder.update_user_pass.getText().toString());
+                map.put("user_loc", holder.update_user_loc.getText().toString());
+                map.put("user_phoneNum", holder.update_user_phoneNum.getText().toString());
                 dataService.update.updateOne(data.get(position).getUser_id(), map).enqueue(new Callback<Member>() {
                     @Override
                     public void onResponse(Call<Member> call, Response<Member> response) {
@@ -117,10 +124,10 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ConstraintLayout info_layout, update_layout;
-        TextView info_id, info_user_id, info_user_name, info_user_pass, update_id;
+        RelativeLayout info_layout, update_layout;
+        TextView info_id, info_user_id, info_user_name, info_user_pass, update_id,info_user_loc,info_user_phoneNum;
         Button info_update, info_delete, update_btn;
-        EditText update_user_id, update_user_name, update_user_pass;
+        EditText update_user_id, update_user_name, update_user_pass,update_user_loc,update_user_phoneNum;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -130,6 +137,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
             info_user_id = itemView.findViewById(R.id.info_user_id);
             info_user_name = itemView.findViewById(R.id.info_user_name);
             info_user_pass = itemView.findViewById(R.id.info_user_pass);
+            info_user_loc = itemView.findViewById(R.id.info_user_loc);
+            info_user_phoneNum = itemView.findViewById(R.id.info_user_phoneNum);
             info_update = itemView.findViewById(R.id.info_update);
             info_delete = itemView.findViewById(R.id.info_delete);
 
@@ -139,6 +148,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
             update_user_id = itemView.findViewById(R.id.update_user_id);
             update_user_name = itemView.findViewById(R.id.update_user_name);
             update_user_pass = itemView.findViewById(R.id.update_user_pass);
+            update_user_loc = itemView.findViewById(R.id.update_user_loc);
+            update_user_phoneNum = itemView.findViewById(R.id.update_user_phoneNum);
             update_btn = itemView.findViewById(R.id.update_btn);
         }
     }
