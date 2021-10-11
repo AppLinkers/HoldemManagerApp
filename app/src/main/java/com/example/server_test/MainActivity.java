@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.server_test.competition.CompetitionActivity;
 import com.example.server_test.pub.Pub;
+import com.example.server_test.pub.PubActivity;
 
 import java.util.HashMap;
 import java.util.List;
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.menu_pub:
-                Intent intent3 = new Intent(getApplicationContext(), Pub.class);
+                Intent intent3 = new Intent(getApplicationContext(), PubActivity.class);
                 startActivity(intent3);
                 break;
         }

@@ -54,18 +54,18 @@ public class PubActivity extends AppCompatActivity {
 
 
         // Member List 띄워주기
-        dataService.select.selectAll().enqueue(new Callback<List<Pub>>() {
-            @Override
-            public void onResponse(Call<List<Pub>> call, Response<List<Pub>> response) {
-                Log.d(TAG, "START");
-                pubs = response.body();
-                setAdapter(pub_list);
-            }
-            @Override
-            public void onFailure(Call<List<Pub>> call, Throwable t) {
-                t.printStackTrace();
-            }
-        });
+//        dataService.select.selectAll().enqueue(new Callback<List<Pub>>() {
+//            @Override
+//            public void onResponse(Call<List<Pub>> call, Response<List<Pub>> response) {
+//                Log.d(TAG, "START");
+//                pubs = response.body();
+//                setAdapter(pub_list);
+//            }
+//            @Override
+//            public void onFailure(Call<List<Pub>> call, Throwable t) {
+//                t.printStackTrace();
+//            }
+//        });
 
         // 멤버 추가 하기
         Button btn_add = findViewById(R.id.btn_add);
@@ -78,25 +78,25 @@ public class PubActivity extends AppCompatActivity {
                 map.put("pub_open", info_pub_open.getText().toString());
                 map.put("pub_end", info_pub_end.getText().toString());
                 map.put("pub_game", info_pub_game.getText().toString());
-                dataService.insert.insertOne(map).enqueue(new Callback<Pub>() {
-                    @Override
-                    public void onResponse(Call<Pub> call, Response<Pub> response) {
-                        pubs.add(response.body());
-                        setAdapter(pub_list);
-                        Toast.makeText(PubActivity.this, "펍 등록 완료", Toast.LENGTH_SHORT).show();
-                        info_pub_name.setText("");
-                        info_pub_info.setText("");
-                        info_pub_open.setText("");
-                        info_pub_end.setText("");
-                        info_pub_game.setText("");
-                    }
-
-                    @Override
-                    public void onFailure(Call<Pub> call, Throwable t) {
-                        Log.d(TAG, "fail");
-                        t.printStackTrace();
-                    }
-                });
+//                dataService.insert.insertOne(map).enqueue(new Callback<Pub>() {
+//                    @Override
+//                    public void onResponse(Call<Pub> call, Response<Pub> response) {
+//                        pubs.add(response.body());
+//                        setAdapter(pub_list);
+//                        Toast.makeText(PubActivity.this, "펍 등록 완료", Toast.LENGTH_SHORT).show();
+//                        info_pub_name.setText("");
+//                        info_pub_info.setText("");
+//                        info_pub_open.setText("");
+//                        info_pub_end.setText("");
+//                        info_pub_game.setText("");
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<Pub> call, Throwable t) {
+//                        Log.d(TAG, "fail");
+//                        t.printStackTrace();
+//                    }
+//                });
             }
         });
     }

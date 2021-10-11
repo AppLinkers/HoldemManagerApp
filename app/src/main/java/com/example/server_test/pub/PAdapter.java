@@ -83,21 +83,21 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
                 map.put("pub_open", holder.pubOpen_update.getText().toString());
                 map.put("pub_end", holder.pubEnd_update.getText().toString());
                 map.put("pub_game", holder.pubGame_update.getText().toString());
-                dataService.update.updateOne(data.get(position).getPub_name(), map).enqueue(new Callback<Pub>() {
-                    @Override
-                    public void onResponse(Call<Pub> call, Response<Pub> response) {
-                        data.set(position, response.body());
-                        Log.d(TAG, String.valueOf(data));
-                        notifyDataSetChanged();
-                        Toast.makeText(context, "아이템 수정 완료", Toast.LENGTH_SHORT).show();
-                        holder.info_layout.setVisibility(View.VISIBLE);
-                        holder.update_layout.setVisibility(View.GONE);
-                    }
-                    @Override
-                    public void onFailure(Call<Pub> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
+//                dataService.update.updateOne(data.get(position).getPub_name(), map).enqueue(new Callback<Pub>() {
+//                    @Override
+//                    public void onResponse(Call<Pub> call, Response<Pub> response) {
+//                        data.set(position, response.body());
+//                        Log.d(TAG, String.valueOf(data));
+//                        notifyDataSetChanged();
+//                        Toast.makeText(context, "아이템 수정 완료", Toast.LENGTH_SHORT).show();
+//                        holder.info_layout.setVisibility(View.VISIBLE);
+//                        holder.update_layout.setVisibility(View.GONE);
+//                    }
+//                    @Override
+//                    public void onFailure(Call<Pub> call, Throwable t) {
+//                        t.printStackTrace();
+//                    }
+//                });
             }
         });
 
@@ -105,19 +105,19 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
         holder.info_delete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                dataService.delete.deleteOne(data.get(position).getPub_name()).enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        data.remove(position);
-                        notifyItemRemoved(position);
-                        Toast.makeText(context, "아이템 삭제 완료", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
+//                dataService.delete.deleteOne(data.get(position).getPub_name()).enqueue(new Callback<ResponseBody>() {
+//                    @Override
+//                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//                        data.remove(position);
+//                        notifyItemRemoved(position);
+//                        Toast.makeText(context, "아이템 삭제 완료", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+//                        t.printStackTrace();
+//                    }
+//                });
 
             }
         });
