@@ -127,8 +127,6 @@ public class PubActivity extends AppCompatActivity {
 //                        t.printStackTrace();
 //                    }
 //                });
-<<<<<<< HEAD
-=======
             }
         });
 
@@ -138,7 +136,6 @@ public class PubActivity extends AppCompatActivity {
                 // 권한 허용에 동의하지 않았을 경우 토스트를 띄웁니다.
                 if(isPermission) goToAlbum();
                 else Toast.makeText(view.getContext(), getResources().getString(R.string.permission_2), Toast.LENGTH_LONG).show();
->>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
             }
         });
     }
