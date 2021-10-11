@@ -1880,6 +1880,7 @@ id forever
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id goToGallary
 id gone
 id graph
 id graph_wrap
@@ -1907,6 +1908,7 @@ id info_competition_start
 id info_delete
 id info_id
 id info_layout
+id info_pub_Img
 id info_pub_end
 id info_pub_game
 id info_pub_info
@@ -2025,6 +2027,7 @@ id pubEnd
 id pubEnd_update
 id pubGame
 id pubGame_update
+id pubImg
 id pubInfo
 id pubInfo_update
 id pubName
@@ -2423,8 +2426,13 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permission_1
+string permission_2
 string search_menu_title
 string status_bar_notification_info_overflow
+string tedpermission_close
+string tedpermission_confirm
+string tedpermission_setting
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -2890,6 +2898,7 @@ style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
 style Theme_Server_test
+style Theme_Transparent_Permission
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

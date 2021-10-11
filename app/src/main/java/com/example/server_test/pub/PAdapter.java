@@ -74,53 +74,53 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
         });
 
         // 정보 수정하기 버튼
-        holder.update_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Map<String, String> map = new HashMap();
-                map.put("pub_name", holder.pubName_update.getText().toString());
-                map.put("pub_info", holder.pubInfo_update.getText().toString());
-                map.put("pub_open", holder.pubOpen_update.getText().toString());
-                map.put("pub_end", holder.pubEnd_update.getText().toString());
-                map.put("pub_game", holder.pubGame_update.getText().toString());
-                dataService.update.updateOne(data.get(position).getPub_name(), map).enqueue(new Callback<Pub>() {
-                    @Override
-                    public void onResponse(Call<Pub> call, Response<Pub> response) {
-                        data.set(position, response.body());
-                        Log.d(TAG, String.valueOf(data));
-                        notifyDataSetChanged();
-                        Toast.makeText(context, "아이템 수정 완료", Toast.LENGTH_SHORT).show();
-                        holder.info_layout.setVisibility(View.VISIBLE);
-                        holder.update_layout.setVisibility(View.GONE);
-                    }
-                    @Override
-                    public void onFailure(Call<Pub> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
-            }
-        });
+//        holder.update_btn.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Map<String, String> map = new HashMap();
+//                map.put("pub_name", holder.pubName_update.getText().toString());
+//                map.put("pub_info", holder.pubInfo_update.getText().toString());
+//                map.put("pub_open", holder.pubOpen_update.getText().toString());
+//                map.put("pub_end", holder.pubEnd_update.getText().toString());
+//                map.put("pub_game", holder.pubGame_update.getText().toString());
+//                dataService.update.updateOne(data.get(position).getPub_name(), map).enqueue(new Callback<Pub>() {
+//                    @Override
+//                    public void onResponse(Call<Pub> call, Response<Pub> response) {
+//                        data.set(position, response.body());
+//                        Log.d(TAG, String.valueOf(data));
+//                        notifyDataSetChanged();
+//                        Toast.makeText(context, "아이템 수정 완료", Toast.LENGTH_SHORT).show();
+//                        holder.info_layout.setVisibility(View.VISIBLE);
+//                        holder.update_layout.setVisibility(View.GONE);
+//                    }
+//                    @Override
+//                    public void onFailure(Call<Pub> call, Throwable t) {
+//                        t.printStackTrace();
+//                    }
+//                });
+//            }
+//        });
 
         // 정보 삭제하기
-        holder.info_delete.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                dataService.delete.deleteOne(data.get(position).getPub_name()).enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        data.remove(position);
-                        notifyItemRemoved(position);
-                        Toast.makeText(context, "아이템 삭제 완료", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
-
-            }
-        });
+//        holder.info_delete.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                dataService.delete.deleteOne(data.get(position).getPub_name()).enqueue(new Callback<ResponseBody>() {
+//                    @Override
+//                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//                        data.remove(position);
+//                        notifyItemRemoved(position);
+//                        Toast.makeText(context, "아이템 삭제 완료", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+//                        t.printStackTrace();
+//                    }
+//                });
+//
+//            }
+//        });
 
 
     }

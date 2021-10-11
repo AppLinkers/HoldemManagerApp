@@ -85,44 +85,44 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
                 map.put("competition_end", holder.cEndUpdate.getText().toString());
 
 
-                dataService.update.updateOneCompetition.(data.get(position).getCompetition_name(), map).enqueue(new Callback<Competition>() {
-                    @Override
-                    public void onResponse(Call<Competition> call, Response<Competition> response) {
-                        data.set(position, response.body());
-                        Log.d(TAG, String.valueOf(data));
-                        notifyDataSetChanged();
-                        Toast.makeText(context, "아이템 수정 완료", Toast.LENGTH_SHORT).show();
-                        holder.info_layout.setVisibility(View.VISIBLE);
-                        holder.update_layout.setVisibility(View.GONE);
-                    }
-                    @Override
-                    public void onFailure(Call<Competition> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
+//                dataService.update.updateOneCompetition.(data.get(position).getCompetition_name(), map).enqueue(new Callback<Competition>() {
+//                    @Override
+//                    public void onResponse(Call<Competition> call, Response<Competition> response) {
+//                        data.set(position, response.body());
+//                        Log.d(TAG, String.valueOf(data));
+//                        notifyDataSetChanged();
+//                        Toast.makeText(context, "아이템 수정 완료", Toast.LENGTH_SHORT).show();
+//                        holder.info_layout.setVisibility(View.VISIBLE);
+//                        holder.update_layout.setVisibility(View.GONE);
+//                    }
+//                    @Override
+//                    public void onFailure(Call<Competition> call, Throwable t) {
+//                        t.printStackTrace();
+//                    }
+//                });
             }
         });
 
         // 정보 삭제하기
-        holder.info_delete.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                dataService.delete.deleteOne(data.get(position).getCompetition_name()).enqueue(new Callback<ResponseBody>() {
-                    @Override
-                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                        data.remove(position);
-                        notifyItemRemoved(position);
-                        Toast.makeText(context, "아이템 삭제 완료", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        t.printStackTrace();
-                    }
-                });
-
-            }
-        });
+//        holder.info_delete.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                dataService.delete.deleteOne(data.get(position).getCompetition_name()).enqueue(new Callback<ResponseBody>() {
+//                    @Override
+//                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+//                        data.remove(position);
+//                        notifyItemRemoved(position);
+//                        Toast.makeText(context, "아이템 삭제 완료", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+//                        t.printStackTrace();
+//                    }
+//                });
+//
+//            }
+//        });
 
 
     }
