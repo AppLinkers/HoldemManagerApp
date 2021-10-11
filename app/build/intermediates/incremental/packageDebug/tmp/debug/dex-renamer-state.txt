@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 #Sun Oct 10 20:42:41 KST 2021
 base.1=D\:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
 path.1=classes.dex
 base.0=D\:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+=======
+#Tue Oct 12 00:16:34 KST 2021
+base.1=C\:\\Users\\pc\\AndroidGit\\HoldemManagerApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+path.1=classes.dex
+base.0=C\:\\Users\\pc\\AndroidGit\\HoldemManagerApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

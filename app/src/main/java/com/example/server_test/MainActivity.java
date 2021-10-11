@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
            open = false;
        }
     }
-
+    //메뉴 컨트롤
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //메뉴 컨트롤
+
     @Override
     public boolean onOptionsItemSelected (MenuItem item)
     {

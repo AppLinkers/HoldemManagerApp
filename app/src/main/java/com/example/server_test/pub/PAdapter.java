@@ -74,6 +74,7 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
         });
 
         // 정보 수정하기 버튼
+<<<<<<< HEAD
         holder.update_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -83,6 +84,17 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
                 map.put("pub_open", holder.pubOpen_update.getText().toString());
                 map.put("pub_end", holder.pubEnd_update.getText().toString());
                 map.put("pub_game", holder.pubGame_update.getText().toString());
+=======
+//        holder.update_btn.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Map<String, String> map = new HashMap();
+//                map.put("pub_name", holder.pubName_update.getText().toString());
+//                map.put("pub_info", holder.pubInfo_update.getText().toString());
+//                map.put("pub_open", holder.pubOpen_update.getText().toString());
+//                map.put("pub_end", holder.pubEnd_update.getText().toString());
+//                map.put("pub_game", holder.pubGame_update.getText().toString());
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 //                dataService.update.updateOne(data.get(position).getPub_name(), map).enqueue(new Callback<Pub>() {
 //                    @Override
 //                    public void onResponse(Call<Pub> call, Response<Pub> response) {
@@ -98,6 +110,7 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
 //                        t.printStackTrace();
 //                    }
 //                });
+<<<<<<< HEAD
             }
         });
 
@@ -105,6 +118,15 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
         holder.info_delete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+=======
+//            }
+//        });
+
+        // 정보 삭제하기
+//        holder.info_delete.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 //                dataService.delete.deleteOne(data.get(position).getPub_name()).enqueue(new Callback<ResponseBody>() {
 //                    @Override
 //                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -118,9 +140,15 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
 //                        t.printStackTrace();
 //                    }
 //                });
+<<<<<<< HEAD
 
             }
         });
+=======
+//
+//            }
+//        });
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 
 
     }

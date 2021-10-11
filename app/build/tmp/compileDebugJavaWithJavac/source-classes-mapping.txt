@@ -21,8 +21,11 @@ com/example/server_test/MainActivity.java
 com/example/server_test/pub/PAdapter.java
  com.example.server_test.pub.PAdapter
  com.example.server_test.pub.PAdapter$1
+<<<<<<< HEAD
  com.example.server_test.pub.PAdapter$2
  com.example.server_test.pub.PAdapter$3
+=======
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
  com.example.server_test.pub.PAdapter$ViewHolder
 com/example/server_test/StartActivity.java
  com.example.server_test.StartActivity
@@ -35,6 +38,11 @@ com/example/server_test/DataService.java
 com/example/server_test/pub/PubActivity.java
  com.example.server_test.pub.PubActivity
  com.example.server_test.pub.PubActivity$1
+<<<<<<< HEAD
+=======
+ com.example.server_test.pub.PubActivity$2
+ com.example.server_test.pub.PubActivity$3
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 com/example/server_test/pub/Pub.java
  com.example.server_test.pub.Pub
 com/example/server_test/Member.java
@@ -43,5 +51,8 @@ com/example/server_test/competition/CAdapter.java
  com.example.server_test.competition.CAdapter
  com.example.server_test.competition.CAdapter$1
  com.example.server_test.competition.CAdapter$2
+<<<<<<< HEAD
  com.example.server_test.competition.CAdapter$3
+=======
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
  com.example.server_test.competition.CAdapter$ViewHolder

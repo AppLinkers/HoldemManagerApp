@@ -1,9 +1,11 @@
 package com.example.server_test.competition;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,9 @@ import com.example.server_test.MainActivity;
 import com.example.server_test.Member;
 import com.example.server_test.MemberAdapter;
 import com.example.server_test.R;
+import com.example.server_test.competition.CAdapter;
+import com.example.server_test.competition.Competition;
+import com.example.server_test.pub.PubActivity;
 
 import java.util.HashMap;
 import java.util.List;
@@ -118,6 +123,44 @@ public class CompetitionActivity extends AppCompatActivity {
             dataVisible.setText("데이터 추가하기");
             open = false;
         }
+    }
+
+    //메뉴 컨트롤
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+
+        inflater.inflate(R.menu.switchmenu, menu);
+
+        return true;
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item)
+    {
+
+        switch(item.getItemId())
+        {
+            case R.id.menu_user:
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.menu_competition:
+                Intent intent2 = new Intent(getApplicationContext(), CompetitionActivity.class);
+                startActivity(intent2);
+
+                break;
+            case R.id.menu_pub:
+                Intent intent3 = new Intent(getApplicationContext(), PubActivity.class);
+                startActivity(intent3);
+                break;
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

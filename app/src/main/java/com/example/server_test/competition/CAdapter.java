@@ -104,9 +104,15 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
         });
 
         // 정보 삭제하기
+<<<<<<< HEAD
         holder.info_delete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+=======
+//        holder.info_delete.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 //                dataService.delete.deleteOne(data.get(position).getCompetition_name()).enqueue(new Callback<ResponseBody>() {
 //                    @Override
 //                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -120,9 +126,15 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
 //                        t.printStackTrace();
 //                    }
 //                });
+<<<<<<< HEAD
 
             }
         });
+=======
+//
+//            }
+//        });
+>>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
 
 
     }
