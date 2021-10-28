@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,7 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
     private List<Pub> data;
     private Context context;
     private DataService dataService;
+
 
     PAdapter(List<Pub> data, Context context, DataService dataService) {
         this.data = data;
@@ -57,10 +59,10 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
         holder.pubName.setText(String.valueOf(data.get(position).getPub_name()));
         holder.pubInfo.setText(String.valueOf(data.get(position).getPub_info()));
         holder.pubOpen.setText(String.valueOf(data.get(position).getPub_open()));
-        holder.pubEnd.setText(String.valueOf(data.get(position).getPub_end()));
         holder.pubGame.setText(String.valueOf(data.get(position).getGame().games()));
         Glide.with(holder.itemView).load(data.get(position).getPub_img()).into(holder.pubImg);
         Log.d(TAG, data.get(position).getPub_img());
+
 
 
 
@@ -71,7 +73,6 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
                 holder.pubName_update.setText(String.valueOf(data.get(position).getPub_name()));
                 holder.pubInfo_update.setText(String.valueOf(data.get(position).getPub_info()));
                 holder.pubOpen_update.setText(String.valueOf(data.get(position).getPub_open()));
-                holder.pubEnd_update.setText(String.valueOf(data.get(position).getPub_end()));
                 holder.pubGame_update.setText(String.valueOf(data.get(position).getGame().games()));
 
 
@@ -88,7 +89,6 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
                 map.put("pub_name", holder.pubName_update.getText().toString());
                 map.put("pub_info", holder.pubInfo_update.getText().toString());
                 map.put("pub_open", holder.pubOpen_update.getText().toString());
-                map.put("pub_end", holder.pubEnd_update.getText().toString());
                 map.put("pub_game", holder.pubGame_update.getText().toString());
 //                dataService.update.updateOne(data.get(position).getPub_name(), map).enqueue(new Callback<Pub>() {
 //                    @Override
@@ -145,7 +145,7 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
             pubName = itemView.findViewById(R.id.pubName);
             pubInfo = itemView.findViewById(R.id.pubInfo);
             pubOpen = itemView.findViewById(R.id.pubOpen);
-            pubEnd = itemView.findViewById(R.id.pubEnd);
+//            pubEnd = itemView.findViewById(R.id.pubEnd);
             pubGame = itemView.findViewById(R.id.pubGame);
             pubImg = itemView.findViewById(R.id.pubImg);
             info_update = itemView.findViewById(R.id.info_update);
@@ -156,7 +156,7 @@ public class PAdapter extends RecyclerView.Adapter<PAdapter.ViewHolder> {
             pubName_update = itemView.findViewById(R.id.pubName_update);
             pubInfo_update = itemView.findViewById(R.id.pubInfo_update);
             pubOpen_update = itemView.findViewById(R.id.pubOpen_update);
-            pubEnd_update = itemView.findViewById(R.id.pubEnd_update);
+//            pubEnd_update = itemView.findViewById(R.id.pubEnd_update);
             pubGame_update = itemView.findViewById(R.id.pubGame_update);
             update_btn = itemView.findViewById(R.id.update_btn);
         }

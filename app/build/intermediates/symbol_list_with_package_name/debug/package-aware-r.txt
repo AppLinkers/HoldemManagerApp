@@ -1786,8 +1786,7 @@ id cAddBtn
 id cBuyIn
 id cBuyInUpdate
 id cDelBtn
-id cEnd
-id cEndUpdate
+id cImgUpdate
 id cLocate
 id cLocateUpdate
 id cName
@@ -1882,6 +1881,8 @@ id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id goToGallary
+id goToGallary_update
+id goToGallary_updatePub
 id gone
 id graph
 id graph_wrap
@@ -1901,8 +1902,8 @@ id ignore
 id ignoreRequest
 id image
 id info
+id info_competition_Img
 id info_competition_buyin
-id info_competition_end
 id info_competition_name
 id info_competition_place
 id info_competition_start
@@ -1910,7 +1911,7 @@ id info_delete
 id info_id
 id info_layout
 id info_pub_Img
-id info_pub_end
+id info_pub_Img_update
 id info_pub_game
 id info_pub_info
 id info_pub_name
@@ -2024,8 +2025,6 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
-id pubEnd
-id pubEnd_update
 id pubGame
 id pubGame_update
 id pubImg

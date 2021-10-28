@@ -70,7 +70,7 @@ public class PubActivity extends AppCompatActivity {
         final EditText info_pub_name = findViewById(R.id.info_pub_name);
         final EditText info_pub_info = findViewById(R.id.info_pub_info);
         final EditText info_pub_open = findViewById(R.id.info_pub_open);
-        final EditText info_pub_end = findViewById(R.id.info_pub_end);
+//        final EditText info_pub_end = findViewById(R.id.info_pub_end);
         final EditText info_pub_game = findViewById(R.id.info_pub_game);
         final ImageView info_pub_img = findViewById(R.id.info_pub_Img);
         dataVisible = findViewById(R.id.dataVisible);
@@ -117,7 +117,7 @@ public class PubActivity extends AppCompatActivity {
                 map.put("pub_name", info_pub_name.getText().toString());
                 map.put("pub_info", info_pub_info.getText().toString());
                 map.put("pub_open", info_pub_open.getText().toString());
-                map.put("pub_end", info_pub_end.getText().toString());
+//                map.put("pub_end", info_pub_end.getText().toString());
                 map.put("pub_game", info_pub_game.getText().toString());
             }
         });
@@ -130,6 +130,8 @@ public class PubActivity extends AppCompatActivity {
                 else Toast.makeText(view.getContext(), getResources().getString(R.string.permission_2), Toast.LENGTH_LONG).show();
             }
         });
+
+
     }
 
     void setAdapter(RecyclerView member_list){
@@ -240,9 +242,13 @@ public class PubActivity extends AppCompatActivity {
 
             setImage();
 
+//            setImage_update();
+
         } else if (requestCode == PICK_FROM_CAMERA) {
 
             setImage();
+
+//            setImage_update();
 
         }
     }
@@ -321,6 +327,24 @@ public class PubActivity extends AppCompatActivity {
         tempFile = null;
 
     }
+    private void setImage_update() {
+
+        ImageView imageView = findViewById(R.id.info_pub_Img_update);
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        Bitmap originalBm = BitmapFactory.decodeFile(tempFile.getAbsolutePath(), options);
+        Log.d(TAG, "setImage_update : " + tempFile.getAbsolutePath());
+        File saved_file = tempFile;
+        imageView.setImageBitmap(originalBm);
+
+        /**
+         *  tempFile 사용 후 null 처리를 해줘야 합니다.
+         *  (resultCode != RESULT_OK) 일 때 tempFile 을 삭제하기 때문에
+         *  기존에 데이터가 남아 있게 되면 원치 않은 삭제가 이뤄집니다.
+         */
+        tempFile = null;
+
+    }
 
     private void tedPermission() {
 
@@ -348,6 +372,7 @@ public class PubActivity extends AppCompatActivity {
                 .check();
 
     }
+
 
 
 

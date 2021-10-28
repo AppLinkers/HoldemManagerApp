@@ -1,94 +1,94 @@
 [
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_member_info.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\member_info.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_start.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_start.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_competition_info.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\competition_info.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_competition_info.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\competition_info.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_member_info.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\member_info.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\menu_switchmenu.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\menu\\switchmenu.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_pub_info.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\pub_info.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pub.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_pub.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pub.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_pub.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_shadow.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\drawable\\border_shadow.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_start.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_start.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_shadow.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\drawable\\border_shadow.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_pub_info.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\pub_info.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\menu_switchmenu.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\menu\\switchmenu.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_competition.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_competition.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "D:\\holdem\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_competition.xml.flat",
-        "source": "D:\\holdem\\HoldemManagerApp\\app\\src\\main\\res\\layout\\activity_competition.xml"
+        "merged": "C:\\androidProjects\\HoldemManagerApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\androidProjects\\HoldemManagerApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }
 ]

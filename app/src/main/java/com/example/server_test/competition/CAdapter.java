@@ -47,7 +47,7 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
         holder.cLocate.setText(String.valueOf(data.get(position).getCompetition_place()));
         holder.cBuyIn.setText(String.valueOf(data.get(position).getCompetition_buyIn()));
         holder.cStart.setText(String.valueOf(data.get(position).getCompetition_start()));
-        holder.cEnd.setText(String.valueOf(data.get(position).getCompetition_end()));
+//        holder.cEnd.setText(String.valueOf(data.get(position).getCompetition_end()));
 
         // 정보 수정하기
         holder.info_update.setOnClickListener(new View.OnClickListener(){
@@ -57,7 +57,7 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
                 holder.cLocateUpdate.setText(String.valueOf(data.get(position).getCompetition_place()));
                 holder.cBuyInUpdate.setText(String.valueOf(data.get(position).getCompetition_buyIn()));
                 holder.cStartUpdate.setText(String.valueOf(data.get(position).getCompetition_start()));
-                holder.cEndUpdate.setText(String.valueOf(data.get(position).getCompetition_end()));
+//                holder.cEndUpdate.setText(String.valueOf(data.get(position).getCompetition_end()));
 
                 holder.info_layout.setVisibility(View.GONE);
                 holder.update_layout.setVisibility(View.VISIBLE);
@@ -73,7 +73,7 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
                 map.put("competition_locate", holder.cLocateUpdate.getText().toString());
                 map.put("competition_buyin", holder.cBuyInUpdate.getText().toString());
                 map.put("competition_start", holder.cStartUpdate.getText().toString());
-                map.put("competition_end", holder.cEndUpdate.getText().toString());
+//                map.put("competition_end", holder.cEndUpdate.getText().toString());
 
 
 //                dataService.update.updateOneCompetition.(data.get(position).getCompetition_name(), map).enqueue(new Callback<Competition>() {
@@ -132,7 +132,7 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
             cLocate = itemView.findViewById(R.id.cLocate);
             cBuyIn = itemView.findViewById(R.id.cBuyIn);
             cStart = itemView.findViewById(R.id.cStart);
-            cEnd = itemView.findViewById(R.id.cEnd);
+//            cEnd = itemView.findViewById(R.id.cEnd);
             info_update = itemView.findViewById(R.id.info_update);
             info_delete = itemView.findViewById(R.id.info_delete);
 
@@ -142,7 +142,7 @@ public class CAdapter extends RecyclerView.Adapter<CAdapter.ViewHolder> {
             cLocateUpdate = itemView.findViewById(R.id.cLocateUpdate);
             cBuyInUpdate = itemView.findViewById(R.id.cBuyInUpdate);
             cStartUpdate = itemView.findViewById(R.id.cStartUpdate);
-            cEndUpdate = itemView.findViewById(R.id.cEndUpdate);
+//            cEndUpdate = itemView.findViewById(R.id.cEndUpdate);
             update_btn = itemView.findViewById(R.id.update_btn);
         }
     }

@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="펍 오픈"
+            android:text="펍 영업시간"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="8dp"/>
@@ -54,21 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="펍 오픈"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="펍 종료"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="8dp"/>
-        <EditText
-            android:id="@+id/info_pub_end"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="펍 종료"/>
+            android:hint="펍 영업시간"/>
 
         <TextView
             android:layout_width="wrap_content"

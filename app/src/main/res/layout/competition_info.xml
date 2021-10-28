@@ -89,23 +89,6 @@
                     android:gravity="center"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="대회 종료"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:id="@+id/cEnd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="대회 종료"
-                    android:gravity="center"/>
-            </LinearLayout>
-
 
         </LinearLayout>
 
@@ -218,18 +201,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대회 종료"
-                    android:textColor="@color/black"/>
-                <EditText
-                    android:id="@+id/cEndUpdate"
-                    android:layout_width="match_parent"
+                    android:text="펍 이미지"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/goToGallary_update"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="대회 종료"
-                    android:gravity="center"/>
+                    android:text="앨범에서 찾기"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/cImgUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerCrop"
+                    android:background="#80E2E2E2"/>
+
             </LinearLayout>
 
 

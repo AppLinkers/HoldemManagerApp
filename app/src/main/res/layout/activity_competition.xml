@@ -70,19 +70,27 @@
             android:layout_marginTop="8dp"
             android:hint="대회 시작"/>
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="대회 종료"
+            android:text="펍 이미지"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="8dp"/>
-        <EditText
-            android:id="@+id/info_competition_end"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/goToGallary"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="대회 종료"/>
+            android:text="앨범에서 찾기"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/info_competition_Img"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            android:background="#80E2E2E2"/>
 
         <Button
             android:id="@+id/btn_add"
