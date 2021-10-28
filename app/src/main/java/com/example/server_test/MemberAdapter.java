@@ -1,5 +1,6 @@
 package com.example.server_test;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,8 +12,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.server_test.dataService.DataService;
 
 import java.util.HashMap;
 import java.util.List;
@@ -47,13 +49,13 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(final MemberAdapter.ViewHolder holder, final int position) {
+    public void onBindViewHolder(final MemberAdapter.ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.info_id.setText(String.valueOf(data.get(position).getId()));
         holder.info_user_id.setText(String.valueOf(data.get(position).getUser_id()));
         holder.info_user_name.setText(String.valueOf(data.get(position).getUser_name()));
         holder.info_user_pass.setText(String.valueOf(data.get(position).getUser_pass()));
-        holder.info_user_loc.setText(String.valueOf(data.get(position).getUser_locate()));
-        holder.info_user_phoneNum.setText(String.valueOf(data.get(position).getUser_phoneNum()));
+        holder.info_user_loc.setText(String.valueOf(data.get(position).getUser_loc()));
+        holder.info_user_phoneNum.setText(String.valueOf(data.get(position).getUser_phone()));
 
         // 정보 수정하기
         holder.info_update.setOnClickListener(new View.OnClickListener(){
@@ -63,8 +65,8 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
                 holder.update_user_id.setText(String.valueOf(data.get(position).getUser_id()));
                 holder.update_user_name.setText(String.valueOf(data.get(position).getUser_name()));
                 holder.update_user_pass.setText(String.valueOf(data.get(position).getUser_pass()));
-                holder.info_user_loc.setText(String.valueOf(data.get(position).getUser_locate()));
-                holder.info_user_phoneNum.setText(String.valueOf(data.get(position).getUser_phoneNum()));
+                holder.info_user_loc.setText(String.valueOf(data.get(position).getUser_loc()));
+                holder.info_user_phoneNum.setText(String.valueOf(data.get(position).getUser_phone()));
 
                 holder.info_layout.setVisibility(View.GONE);
                 holder.update_layout.setVisibility(View.VISIBLE);
@@ -80,8 +82,10 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
                 map.put("user_name", holder.update_user_name.getText().toString());
                 map.put("user_pass", holder.update_user_pass.getText().toString());
                 map.put("user_loc", holder.update_user_loc.getText().toString());
-                map.put("user_phoneNum", holder.update_user_phoneNum.getText().toString());
-                dataService.update.updateOne(data.get(position).getUser_id(), map).enqueue(new Callback<Member>() {
+                map.put("user_phone", holder.update_user_phoneNum.getText().toString());
+                Log.d("test", data.get(position).getUser_id());
+
+                dataService.member.updateMember(data.get(position).getUser_id(), map).enqueue(new Callback<Member>() {
                     @Override
                     public void onResponse(Call<Member> call, Response<Member> response) {
                         data.set(position, response.body());
@@ -103,7 +107,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
         holder.info_delete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                dataService.delete.deleteOne(data.get(position).getUser_id()).enqueue(new Callback<ResponseBody>() {
+                dataService.member.deleteMember(data.get(position).getUser_id()).enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         data.remove(position);

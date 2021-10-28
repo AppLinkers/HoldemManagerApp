@@ -1,6 +1,3 @@
-com/example/server_test/competition/CompetitionActivity.java
- com.example.server_test.competition.CompetitionActivity
- com.example.server_test.competition.CompetitionActivity$1
 com/example/server_test/competition/Competition.java
  com.example.server_test.competition.Competition
 com/example/server_test/MemberAdapter.java
@@ -11,6 +8,23 @@ com/example/server_test/MemberAdapter.java
  com.example.server_test.MemberAdapter$3
  com.example.server_test.MemberAdapter$3$1
  com.example.server_test.MemberAdapter$ViewHolder
+com/example/server_test/dataService/PubAPI.java
+ com.example.server_test.dataService.PubAPI
+com/example/server_test/competition/CAdapter.java
+ com.example.server_test.competition.CAdapter
+ com.example.server_test.competition.CAdapter$1
+ com.example.server_test.competition.CAdapter$2
+ com.example.server_test.competition.CAdapter$3
+ com.example.server_test.competition.CAdapter$ViewHolder
+com/example/server_test/pub/Game.java
+ com.example.server_test.pub.Game
+com/example/server_test/pub/Pub.java
+ com.example.server_test.pub.Pub
+com/example/server_test/Member.java
+ com.example.server_test.Member
+com/example/server_test/competition/CompetitionActivity.java
+ com.example.server_test.competition.CompetitionActivity
+ com.example.server_test.competition.CompetitionActivity$1
 com/example/server_test/BuildConfig.java
  com.example.server_test.BuildConfig
 com/example/server_test/MainActivity.java
@@ -18,41 +32,22 @@ com/example/server_test/MainActivity.java
  com.example.server_test.MainActivity$1
  com.example.server_test.MainActivity$2
  com.example.server_test.MainActivity$2$1
+com/example/server_test/StartActivity.java
+ com.example.server_test.StartActivity
+com/example/server_test/dataService/MemberAPI.java
+ com.example.server_test.dataService.MemberAPI
+com/example/server_test/dataService/DataService.java
+ com.example.server_test.dataService.CompetitionAPI
+ com.example.server_test.dataService.DataService
 com/example/server_test/pub/PAdapter.java
  com.example.server_test.pub.PAdapter
  com.example.server_test.pub.PAdapter$1
-<<<<<<< HEAD
  com.example.server_test.pub.PAdapter$2
  com.example.server_test.pub.PAdapter$3
-=======
->>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
  com.example.server_test.pub.PAdapter$ViewHolder
-com/example/server_test/StartActivity.java
- com.example.server_test.StartActivity
-com/example/server_test/DataService.java
- com.example.server_test.DataService
- com.example.server_test.DeleteAPI
- com.example.server_test.InsertAPI
- com.example.server_test.SelectAPI
- com.example.server_test.UpdateAPI
 com/example/server_test/pub/PubActivity.java
  com.example.server_test.pub.PubActivity
  com.example.server_test.pub.PubActivity$1
-<<<<<<< HEAD
-=======
  com.example.server_test.pub.PubActivity$2
  com.example.server_test.pub.PubActivity$3
->>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
-com/example/server_test/pub/Pub.java
- com.example.server_test.pub.Pub
-com/example/server_test/Member.java
- com.example.server_test.Member
-com/example/server_test/competition/CAdapter.java
- com.example.server_test.competition.CAdapter
- com.example.server_test.competition.CAdapter$1
- com.example.server_test.competition.CAdapter$2
-<<<<<<< HEAD
- com.example.server_test.competition.CAdapter$3
-=======
->>>>>>> 405f706f55e6a239579ec213c5487fe208df1171
- com.example.server_test.competition.CAdapter$ViewHolder
+ com.example.server_test.pub.PubActivity$4

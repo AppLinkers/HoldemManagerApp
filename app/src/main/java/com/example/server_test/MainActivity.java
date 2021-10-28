@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.server_test.competition.CompetitionActivity;
-import com.example.server_test.pub.Pub;
+import com.example.server_test.dataService.DataService;
 import com.example.server_test.pub.PubActivity;
 
 import java.util.HashMap;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Member List 띄워주기
-        dataService.select.selectAll().enqueue(new Callback<List<Member>>() {
+        dataService.member.listMember().enqueue(new Callback<List<Member>>() {
             @Override
             public void onResponse(Call<List<Member>> call, Response<List<Member>> response) {
                 Log.d(TAG, "START");
@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 map.put("user_name", info_user_name.getText().toString());
                 map.put("user_pass", info_user_pass.getText().toString());
                 map.put("user_loc", info_user_loc.getText().toString());
-                map.put("user_phoneNum", info_user_phoneNum.getText().toString());
-                dataService.insert.insertOne(map).enqueue(new Callback<Member>() {
+                map.put("user_phone", info_user_phoneNum.getText().toString());
+                dataService.member.addMember(map).enqueue(new Callback<Member>() {
                     @Override
                     public void onResponse(Call<Member> call, Response<Member> response) {
                         members.add(response.body());

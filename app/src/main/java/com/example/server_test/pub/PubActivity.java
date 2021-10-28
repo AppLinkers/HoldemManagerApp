@@ -1,12 +1,14 @@
 package com.example.server_test.pub;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -25,12 +27,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.server_test.DataService;
 import com.example.server_test.MainActivity;
 import com.example.server_test.R;
-import com.example.server_test.competition.CAdapter;
-import com.example.server_test.competition.Competition;
 import com.example.server_test.competition.CompetitionActivity;
+import com.example.server_test.dataService.DataService;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
@@ -44,8 +44,6 @@ import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class PubActivity extends AppCompatActivity {
 
@@ -61,7 +59,6 @@ public class PubActivity extends AppCompatActivity {
     private static final int PICK_FROM_ALBUM = 1;
     private static final int PICK_FROM_CAMERA = 2;
     private File tempFile;
-    private File saved_file;
     private Boolean isPermission = true;
 
 
@@ -75,29 +72,43 @@ public class PubActivity extends AppCompatActivity {
         final EditText info_pub_open = findViewById(R.id.info_pub_open);
         final EditText info_pub_end = findViewById(R.id.info_pub_end);
         final EditText info_pub_game = findViewById(R.id.info_pub_game);
+        final ImageView info_pub_img = findViewById(R.id.info_pub_Img);
         dataVisible = findViewById(R.id.dataVisible);
         open =false;
         addData = findViewById(R.id.addData);
         pub_list.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
 
+        @SuppressLint({"StaticFieldLeak", "NewApi", "LocalSuppress"})
+        AsyncTask<Void, Void, List<Pub>> listAPI = new AsyncTask<Void, Void, List<Pub>>() {
+            @Override
+            protected List<Pub> doInBackground(Void... params) {
+                Call<List<Pub>> call = dataService.pub.listPub();
+                try {
+                    return call.execute().body();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(List<Pub> s) {
+                super.onPostExecute(s);
+            }
+        }.execute();
+
+
+        try {
+            pubs = listAPI.get();
+            setAdapter(pub_list);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         tedPermission();
 
-        // Member List 띄워주기
-//        dataService.select.selectAll().enqueue(new Callback<List<Pub>>() {
-//            @Override
-//            public void onResponse(Call<List<Pub>> call, Response<List<Pub>> response) {
-//                Log.d(TAG, "START");
-//                pubs = response.body();
-//                setAdapter(pub_list);
-//            }
-//            @Override
-//            public void onFailure(Call<List<Pub>> call, Throwable t) {
-//                t.printStackTrace();
-//            }
-//        });
-
-        // 멤버 추가 하기
         Button btn_add = findViewById(R.id.btn_add);
         btn_add.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -108,25 +119,6 @@ public class PubActivity extends AppCompatActivity {
                 map.put("pub_open", info_pub_open.getText().toString());
                 map.put("pub_end", info_pub_end.getText().toString());
                 map.put("pub_game", info_pub_game.getText().toString());
-//                dataService.insert.insertOne(map).enqueue(new Callback<Pub>() {
-//                    @Override
-//                    public void onResponse(Call<Pub> call, Response<Pub> response) {
-//                        pubs.add(response.body());
-//                        setAdapter(pub_list);
-//                        Toast.makeText(PubActivity.this, "펍 등록 완료", Toast.LENGTH_SHORT).show();
-//                        info_pub_name.setText("");
-//                        info_pub_info.setText("");
-//                        info_pub_open.setText("");
-//                        info_pub_end.setText("");
-//                        info_pub_game.setText("");
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<Pub> call, Throwable t) {
-//                        Log.d(TAG, "fail");
-//                        t.printStackTrace();
-//                    }
-//                });
             }
         });
 
@@ -318,7 +310,7 @@ public class PubActivity extends AppCompatActivity {
         BitmapFactory.Options options = new BitmapFactory.Options();
         Bitmap originalBm = BitmapFactory.decodeFile(tempFile.getAbsolutePath(), options);
         Log.d(TAG, "setImage : " + tempFile.getAbsolutePath());
-        saved_file = tempFile;
+        File saved_file = tempFile;
         imageView.setImageBitmap(originalBm);
 
         /**
